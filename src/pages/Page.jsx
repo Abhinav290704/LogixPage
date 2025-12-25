@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { FaWindows } from "react-icons/fa";
+import logicxplorerIcon from "../assets/logicxplorer-icon.ico";
+
 
 const Page = () => {
   const [showGuide, setShowGuide] = useState(false);
@@ -15,9 +17,12 @@ const Page = () => {
           {/* Icon + Name */}
           <div className="flex items-center gap-6 mb-10">
             {/* ICON PLACEHOLDER */}
-            <div className="w-24 h-24 border border-white/30 flex items-center justify-center text-sm text-gray-300">
-              LogixXplore<br />icon
-            </div>
+            <img
+  src={logicxplorerIcon}
+  alt="LogicXplorer Icon"
+  className="w-24 h-24 object-contain"
+/>
+
 
             <h1 className="text-4xl font-semibold">
               LogicXplorer
@@ -43,9 +48,12 @@ const Page = () => {
 
           {/* Download Button */}
           <div>
-            <button className="px-8 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 transition">
+            <a href="/downloads/LogicXplorer.zip"
+            download
+            className="inline-block px-8 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 transition">
               Download
-            </button>
+            </a>
+
           </div>
         </div>
 
